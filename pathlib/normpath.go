@@ -1,4 +1,4 @@
-package normpath
+package pathlib
 
 import "strings"
 
@@ -7,7 +7,7 @@ func expandDoubleDot(path string, idx int) []rune {
 	return append([]rune(newPathPrefix), []rune(path[idx+4:])...)
 }
 
-func normpath(path string) string {
+func Normpath(path string) string {
 	path = strings.TrimPrefix(path, "./")
 	newPath := []rune{}
 
@@ -45,7 +45,7 @@ func normpath(path string) string {
 	}
 
 	if string(newPath) != path {
-		return normpath(string(newPath))
+		return Normpath(string(newPath))
 	}
 
 	if string(newPath) == "" {

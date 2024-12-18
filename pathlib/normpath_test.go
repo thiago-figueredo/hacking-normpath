@@ -1,4 +1,4 @@
-package normpath
+package pathlib
 
 import "testing"
 import "github.com/stretchr/testify/assert"
