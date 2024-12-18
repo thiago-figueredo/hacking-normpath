@@ -6,7 +6,12 @@ If the server has a base path like `/home/foo/bar`, we can only access files or 
 I've read the python 3.12 source code and it seems it's using a function called normpath from a posix module. 
 I've not found the source code so i decided to implement it myself. 
 I've created a simple cli project in go to simulate the server, instead of creating a http server it only read the filepath that you put in the cli args. 
-Can someone find a bug or a vulnerability in my code or in the python 3.12 simple http server ?
+##### Can someone find a bug or a vulnerability in my code or in the python 3.12 simple http server ?
+
+# DOCS
+
+Python documentation of normpath: [os.path.normpath](https://docs.python.org/3.12/library/os.path.html#os.path.normpath).
+Normalize a pathname by collapsing redundant separators and up-level references so that `A//B, A/B/, A/./B and A/foo/../B` all become `A/B`.
 
 
 # Usage
